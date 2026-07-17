@@ -116,28 +116,27 @@ export default function Projects() {
             </button>
           </div>
         </div>
-      </div>
+        <div ref={scrollRef} className="flex gap-4 overflow-x-auto pb-4 snap-x scroll-pl-0 max-w-full">
+          {PROJECTS.map((project, i) => (
+            <motion.div
+              key={project.name}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="snap-start"
+            >
+              <TradeSlip project={project} />
+            </motion.div>
+          ))}
+          <div className="flex-shrink-0 w-4" />
+        </div>
 
-      <div ref={scrollRef} className="flex gap-4 overflow-x-auto pb-4 px-4 md:px-8 snap-x scroll-pl-4 md:scroll-pl-8 max-w-[100vw]">
-        {PROJECTS.map((project, i) => (
-          <motion.div
-            key={project.name}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.4, delay: i * 0.05 }}
-            className="snap-start"
-          >
-            <TradeSlip project={project} />
-          </motion.div>
-        ))}
-        <div className="flex-shrink-0 w-4" />
-      </div>
-
-      <div className="max-w-7xl mx-auto mt-4 px-4 md:px-8">
-        <div className="flex items-center gap-2 text-xs font-mono text-steel-muted">
-          <ArrowUpRight className="w-3 h-3 text-bull" />
-          <span>Swipe / scroll to browse all positions</span>
+        <div className="mt-4">
+          <div className="flex items-center gap-2 text-xs font-mono text-steel-muted">
+            <ArrowUpRight className="w-3 h-3 text-bull" />
+            <span>Swipe / scroll to browse all positions</span>
+          </div>
         </div>
       </div>
     </section>
