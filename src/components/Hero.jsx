@@ -7,7 +7,7 @@ const SOCIALS = [
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/anson-lau-9673641b8/" },
   { icon: Mail, label: "Email", href: "mailto:a74lau@gmail.com" },
   { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/anson___lau/" },
-  { icon: FileText, label: "Resume", href: "/AL_Resume_2026.pdf?v=20260717-2" },
+  { icon: FileText, label: "Resume", href: "/AL_Resume_2026.pdf?v=20260717-3", download: "AL_Resume_2026.pdf" },
 ];
 
 const STATS = [
@@ -85,7 +85,8 @@ export default function Hero() {
                 <a
                   key={social.label}
                   href={social.href}
-                  target={social.href.startsWith("mailto") ? undefined : "_blank"}
+                  target={social.href.startsWith("mailto") || social.download ? undefined : "_blank"}
+                  download={social.download}
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-3 py-2 border border-steel bg-obsidian-light/40 hover:border-bull hover:bg-bull/5 transition-all group"
                   aria-label={social.label}
