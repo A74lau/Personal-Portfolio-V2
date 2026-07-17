@@ -1,0 +1,16 @@
+{
+  "name": "Anson Lau — Software Engineer",
+  "short_name": "$ANSON",
+  "description": "Portfolio of Anson Lau — Software Engineer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f0d",
+  "theme_color": "#00ffa3",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
