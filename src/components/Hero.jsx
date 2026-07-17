@@ -7,7 +7,7 @@ const SOCIALS = [
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/anson-lau-9673641b8/" },
   { icon: Mail, label: "Email", href: "mailto:a74lau@gmail.com" },
   { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/anson___lau/" },
-  { icon: FileText, label: "Resume", href: "/AL_Resume_2026.pdf?v=20260717" },
+  { icon: FileText, label: "Resume", href: "/AL_Resume_2026.pdf?v=20260717-2" },
 ];
 
 const STATS = [
